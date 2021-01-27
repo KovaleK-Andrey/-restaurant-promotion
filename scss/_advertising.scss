@@ -1,0 +1,21 @@
+.advertising {
+    background-color: transparent;
+
+    .advertising-wrap {
+        @include flex-spb;
+        align-items: center;
+    }
+
+    .advertising-text {
+        width: 30%;
+        text-align: center;
+    }
+
+    .advertising-svg {
+        fill: $fill-color;
+
+        &:hover  {
+            fill: $fill-color-hover;
+        }
+    }
+}

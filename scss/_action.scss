@@ -1,0 +1,45 @@
+.actions {
+    margin-top: 90px;
+    padding-bottom: 100px;
+
+    .actions-list {
+        margin: 42px auto 0;
+        width: 58.4%;
+
+        :first-child {
+            margin-top: 0;
+        }
+    }
+
+    .action-item {
+        margin-top: 57px;
+        @include flex-spb;
+    }
+
+    .actions-number {
+        display: block;
+        @include font(144px, 0.95, 400);
+        color: $fill-color-hover;
+    } 
+
+    .action-text {
+        display: block;
+        @include font(18px, 1.66, 400);
+        width: 84.7%;
+        padding: 40px 69px 40px 30px;
+        align-self: center;
+        color: $main-text-color;
+        background-color: $bg-action-text;
+    }
+
+    .action-link {
+        color: $vk-link-color;
+        text-decoration: none;
+        
+        &:hover,
+        &:focus {
+            color: $fill-color-hover;
+            transition: color .2s linear;
+        }
+    }
+}

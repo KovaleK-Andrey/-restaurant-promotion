@@ -1,0 +1,45 @@
+.header {
+    width: 100%;
+    background-color: $header-bg-color;
+    position: relative;
+    z-index: 3;
+
+    .header__wrap {
+        @include flex-spb;
+        align-items: center;
+    }
+
+    .header__logo-title {
+        @include font (24px, 1.33, 400);
+        text-decoration: none;
+        color: $white-color;
+        text-transform: capitalize;
+        
+        &:hover,
+        &:focus {
+            color: $fill-color-hover;
+            transition: color .2s linear;
+        }
+    }
+
+    .header__nav-list {
+        display: flex;
+    }
+
+    .header__nav-item {
+        margin: 15px 16px;
+    }
+
+    .header__nav-link {
+        display: block;
+        padding: 20px;
+        color: $white-color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $fill-color-hover;
+            transition: color .2s linear;
+        }
+    }
+}
