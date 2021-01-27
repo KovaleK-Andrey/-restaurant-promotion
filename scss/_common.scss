@@ -65,7 +65,7 @@ body {
     height: auto;
     margin: 0 auto;
     background-color: $body-bg;
-    font-family: 'Poppins', sans-serif;;
+    @include font-main;
     @include font (18px, 1.66, 400);
     font-style: normal;
     color: $white-color;
@@ -86,6 +86,10 @@ body {
     background-color: $btn-color;
     color: $black-color;
     @include font (18px, 1.7, 400);
+    max-width: 245px;
+    width: 100%;
+    padding: 14px 52px;
+    text-align: center;
     border: none;
     outline: none;
     transition: background-color .2s linear;
@@ -100,4 +104,15 @@ body {
     text-align: center;
     @include font (38px, 1.31, 500);
     color: $title-color;
+}
+
+.vk-link {
+    color: $vk-link-color;
+    text-decoration: none;
+    
+    &:hover,
+    &:focus {
+        color: $fill-color-hover;
+        transition: color .2s linear;
+    }
 }

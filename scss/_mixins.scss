@@ -8,3 +8,11 @@
     display: flex;
     justify-content: space-between;
 }
+
+@mixin font-main {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin font-firo {
+    font-family: 'Fira Mono', monospace;
+}
