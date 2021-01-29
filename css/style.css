@@ -364,3 +364,118 @@ body {
 .questions .questions-title {
   margin-top: 80px;
 }
+
+.questions .questions-list {
+  position: relative;
+  margin: 50px auto 0;
+  width: 56.1%;
+  padding: 27px 120px 27px 100px;
+  background-color: rgba(71, 80, 76, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.questions .questions-list::before {
+  content: url(../img/arrow.png);
+  position: absolute;
+  left: 41px;
+}
+
+.questions .questions-list:hover .questions-item {
+  display: block;
+}
+
+.questions .questions-item {
+  position: relative;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 15px;
+  display: none;
+}
+
+.questions .questions-item::before {
+  content: "-";
+  position: absolute;
+  left: -28px;
+}
+
+.questions .questions-feedback {
+  display: block;
+  width: 71.5%;
+  text-align: center;
+  margin: 60px auto 0;
+  padding-bottom: 60px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.questions .questions-wish {
+  padding: 57px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(71, 80, 76, 0.6);
+}
+
+.questions .questions-wish__text {
+  width: 41.3%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  padding-top: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer {
+  background-color: #2b2f2d;
+}
+
+.footer .footer-wrap {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer-copyright {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .footer-img {
+  display: block;
+  margin: auto 0;
+  transition: transform .3s linear;
+}
+
+.footer .footer-img:hover {
+  cursor: pointer;
+  transform: rotate(320deg);
+}
+
+.footer .footer-partners {
+  width: 248px;
+}
+
+.footer .footer-partners__text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .footer-partners__list {
+  max-width: 248px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer-partners__item {
+  margin-top: 20px;
+  display: block;
+  width: 18.25%;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #c0bcbc;
+  transition: border-radius .3s linear;
+}
+
+.footer .footer-partners__item:hover {
+  cursor: pointer;
+  border-radius: 0;
+}
