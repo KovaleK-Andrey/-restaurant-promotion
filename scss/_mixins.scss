@@ -8,3 +8,29 @@
     display: flex;
     justify-content: space-between;
 }
+
+@mixin font-main {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin font-firo {
+    font-family: 'Fira Mono', monospace;
+}
+
+@mixin table {
+    @media (min-width: 801px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin min-table {
+    @media (min-width: 579px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (min-width: 300px) and (max-width: 578px) {
+        @content;
+    }
+}

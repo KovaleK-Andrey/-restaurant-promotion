@@ -65,10 +65,22 @@ body {
     height: auto;
     margin: 0 auto;
     background-color: $body-bg;
-    font-family: 'Poppins', sans-serif;;
+    @include font-main;
     @include font (18px, 1.66, 400);
     font-style: normal;
     color: $white-color;
+
+    @include table {
+        width: 100%;
+    }
+
+    @include min-table {
+        width: 100%;
+    }
+
+    @include phone {
+        width: 100%;
+    }
 }
 
 .main {
@@ -78,14 +90,31 @@ body {
 }
 
 .container {
-    max-width: 1230px;
+    max-width: 1200px;
+    padding: 0 15px;
     margin: 0 auto;
+
+    @include table {
+        width: 91.1%;
+    }
+
+    @include min-table {
+        width: 91.1%;
+    }
+
+    @include phone {
+        width: 91.1%;
+    }
 }
 
 .button {
     background-color: $btn-color;
     color: $black-color;
     @include font (18px, 1.7, 400);
+    max-width: 245px;
+    width: 100%;
+    padding: 14px 52px;
+    text-align: center;
     border: none;
     outline: none;
     transition: background-color .2s linear;
@@ -94,10 +123,39 @@ body {
         cursor: pointer;
         background-color: $title-color;
     }
+
+    @include min-table {
+        padding: 18px 52px;
+    }
+
+    @include phone {
+        max-width: 145px;
+        @include font(14px, 1.5, 400);
+        padding: 13px 9px;
+    }
 }
 
 .title {
     text-align: center;
     @include font (38px, 1.31, 500);
     color: $title-color;
+
+    @include min-table {
+        @include font (32px, 1.31, 500);
+    }
+
+    @include phone {
+        @include font (28px, 1.31, 500);
+    }
+}
+
+.vk-link {
+    color: $vk-link-color;
+    text-decoration: none;
+    
+    &:hover,
+    &:focus {
+        color: $fill-color-hover;
+        transition: color .2s linear;
+    }
 }

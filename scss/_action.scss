@@ -1,6 +1,5 @@
 .actions {
     margin-top: 90px;
-    padding-bottom: 100px;
 
     .actions-list {
         margin: 42px auto 0;
@@ -9,17 +8,47 @@
         :first-child {
             margin-top: 0;
         }
+
+        @include table {
+            width: 90%;
+        }
+
+        @include min-table {
+            width: 100%;
+        }
+
+        @include phone {
+            width: 100%;
+        }
     }
 
     .action-item {
         margin-top: 57px;
         @include flex-spb;
+
+        @include min-table {
+            margin-top: 41px;
+        }
+
+        @include phone {
+            margin-top: 31px;
+        }
     }
 
     .actions-number {
         display: block;
+        @include font-firo;
         @include font(144px, 0.95, 400);
         color: $fill-color-hover;
+
+        @include min-table {
+            @include font(100px, 0.95, 400);
+            align-self: center;
+        }
+
+        @include phone {
+            display: none;
+        }
     } 
 
     .action-text {
@@ -30,16 +59,63 @@
         align-self: center;
         color: $main-text-color;
         background-color: $bg-action-text;
+
+        @include min-table {
+            @include font(14px, 1.66, 400);
+            padding: 30px 59px 30px 20px;
+        }
+
+        @include phone {
+            width: 100%;
+            @include font(12px, 1.66, 400);
+            padding: 30px 14px 30px 14px;
+        }
     }
 
-    .action-link {
-        color: $vk-link-color;
-        text-decoration: none;
-        
-        &:hover,
-        &:focus {
-            color: $fill-color-hover;
-            transition: color .2s linear;
+    .action-condition {
+        width: 60.5%;
+        margin: 99px auto 0;
+        padding-bottom: 99px;
+
+        @include table {
+            width: 90%;
+        }
+
+        @include min-table {
+            margin: 69px auto 0;
+            width: 100%;
+        }
+
+        @include phone {
+            margin: 69px auto 0;
+            width: 100%;
+        }
+    }
+
+    .action-condition__title {
+        @include font(26px, 1.15, 500);
+        text-align: center;
+        color: $main-heading-color;
+
+        @include phone {
+            @include font(22px, 1.15, 500);
+        }
+    }
+
+    .action-condition-text {
+        padding-top: 30px;
+        @include font(20px, 1.5, 400);
+        color: $main-text-color;
+        text-align: center;
+
+        @include min-table {
+            padding-top: 20px;
+            @include font(16px, 1.5, 400);
+        }
+
+        @include phone {
+            padding-top: 20px;
+            @include font(14px, 1.5, 400);
         }
     }
 }

@@ -14,6 +14,14 @@
         text-decoration: none;
         color: $white-color;
         text-transform: capitalize;
+
+        @include min-table {
+            @include font (20px, 1.33, 400);
+        }
+
+        @include phone {
+            @include font (18px, 1.33, 400);
+        }
         
         &:hover,
         &:focus {
@@ -22,12 +30,67 @@
         }
     }
 
+    .header__nav {
+        @include min-table {
+            visibility: hidden;
+        }
+
+        @include phone {
+            visibility: hidden;
+        }
+    }
+
     .header__nav-list {
         display: flex;
+
+        @include min-table {
+            flex-direction: column;
+        }
+
+        @include phone {
+            flex-direction: column;
+        }
+    }
+
+    .header__btn {
+        display: none;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        fill: $white-color;
+
+        @include min-table {
+            display: block;
+
+            &:focus {
+                fill: $fill-color-hover;
+            }
+        }
+
+        @include phone{
+            display: block;
+
+            &:focus {
+                fill: $fill-color-hover;
+            }
+        }
     }
 
     .header__nav-item {
         margin: 15px 16px;
+
+        &:last-child {
+            @include table {
+                margin-right: 0;
+            }
+        }
+        @include min-table {
+            margin: 5px 0 0;
+        }
+
+        @include phone {
+            margin: 5px 0 0;
+        }
     }
 
     .header__nav-link {
@@ -36,10 +99,53 @@
         color: $white-color;
         text-decoration: none;
 
+        @include table {
+            padding: 10px;
+        }
+
+        @include min-table {
+            padding: 0;
+        }
+
+        @include phone {
+            padding: 0;
+            @include font(14px, 1.5, 400);
+        }
+
+        &:last-child {
+            @include table {
+                padding-right: 0;
+            }
+        }
+
         &:hover,
         &:focus {
             color: $fill-color-hover;
             transition: color .2s linear;
         }
+    }
+}
+
+.show {
+    visibility: visible;
+    position: relative;
+    top: 0;
+    left: 250%;
+    transform: translate(-50%);
+
+    @include phone {
+        left: 100%;
+        @include font(14px, 1.5, 400);
+    }
+}
+
+.position {
+    position: relative;
+    left: 35px;
+    bottom: 35px;
+    transform: rotate(90deg);
+    @include phone {
+        left: 5px;
+        bottom: 25px;
     }
 }
