@@ -4,10 +4,23 @@
     .footer-wrap  {
         padding: 20px 0;
         @include flex-spb;
+
+        @include min-table {
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        @include phone {
+            justify-content: space-around;
+            align-items: center;
+        }
     }
 
     .footer-copyright {
         color: $main-text-color;
+        @include phone {
+            @include font(14px, 1.2, 400);
+        }
     }
 
     .footer-img {
@@ -23,6 +36,14 @@
 
     .footer-partners {
         width: 248px;
+
+        @include min-table {
+            display: none;
+        }
+
+        @include phone {
+            display: none;
+        }
     }
 
     .footer-partners__text {

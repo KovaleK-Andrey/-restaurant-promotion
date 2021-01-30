@@ -12,6 +12,22 @@
         background-color: $results-bg-color;
         color: $main-heading-color;
 
+        @include table {
+            width: 80%;
+        }
+
+        @include min-table {
+            width: 80%;
+            @include font(14px, 1.5, 400);
+            padding: 27px 45px 27px 100px;
+        }
+
+        @include phone {
+            width: 90%;
+            @include font(12px, 1.5, 400);
+            padding: 27px 15px 27px 100px;
+        }
+
         &::before {
             content: url(../img/arrow.png);
             position: absolute;
@@ -42,6 +58,16 @@
         margin: 60px auto 0;
         padding-bottom: 60px;
         color: $main-text-color;
+
+        @include min-table {
+            width: 80%;
+            @include font(14px, 1.5, 400);
+        }
+
+        @include phone {
+            width: 90%;
+            @include font(14px, 1.5, 400);
+        }
     }
 
     .questions-wish {
@@ -50,6 +76,18 @@
         flex-direction: column;
         align-items: center;
         background-color: $results-bg-color;
+
+        @include table {
+            padding: 57px 0 50px 0;
+        }
+
+        @include min-table {
+            padding: 57px 0 50px 0;
+        }
+
+        @include phone {
+            padding: 57px 0 50px 0;
+        }
     }
 
     .questions-wish__text {
@@ -58,5 +96,22 @@
         @include font(24px, 1.25, 400);
         padding-top: 40px;
         color: $main-heading-color;
+
+        @include table {
+            width: 68%;
+            padding-top: 20px;
+        }
+
+        @include min-table {
+            width: 68%;
+            padding-top: 20px;
+            @include font(20px, 1.25, 400);
+        }
+
+        @include phone {
+            width: 95%;
+            padding-top: 20px;
+            @include font(18px, 1.25, 400);
+        }
     }
 }

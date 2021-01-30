@@ -69,6 +69,18 @@ body {
     @include font (18px, 1.66, 400);
     font-style: normal;
     color: $white-color;
+
+    @include table {
+        width: 100%;
+    }
+
+    @include min-table {
+        width: 100%;
+    }
+
+    @include phone {
+        width: 100%;
+    }
 }
 
 .main {
@@ -78,8 +90,21 @@ body {
 }
 
 .container {
-    max-width: 1230px;
+    max-width: 1200px;
+    padding: 0 15px;
     margin: 0 auto;
+
+    @include table {
+        width: 91.1%;
+    }
+
+    @include min-table {
+        width: 91.1%;
+    }
+
+    @include phone {
+        width: 91.1%;
+    }
 }
 
 .button {
@@ -98,12 +123,30 @@ body {
         cursor: pointer;
         background-color: $title-color;
     }
+
+    @include min-table {
+        padding: 18px 52px;
+    }
+
+    @include phone {
+        max-width: 145px;
+        @include font(14px, 1.5, 400);
+        padding: 13px 9px;
+    }
 }
 
 .title {
     text-align: center;
     @include font (38px, 1.31, 500);
     color: $title-color;
+
+    @include min-table {
+        @include font (32px, 1.31, 500);
+    }
+
+    @include phone {
+        @include font (28px, 1.31, 500);
+    }
 }
 
 .vk-link {

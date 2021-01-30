@@ -1,31 +1,89 @@
 .gold-cart {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     .gold-cart__title {
         margin-top: 110px;
+
+        @include min-table {
+            margin-top: 90px;
+        }
+
+        @include phone {
+            margin-top: 80px;
+        }
     }
 
     .gold-cart__advantages {
+        width: 78.7%;
         margin-top: 51px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include table {
+            width: 100%;
+        }
+
+        @include min-table {
+            width: 100%;
+        }
+
+        @include phone  {
+        flex-direction: column;
+        width: 100%;
+        }
+    }
+
+    .gold-cart-img {
+        width: 50%;
+        height: auto;
+
+        @include phone  {
+            width: 100%;
+        }
     }
 
     .gold-cart__list {
         padding-left: 31px;
+        @include phone {
+            padding-left: 0;
+        }
     }
 
     .gold-cart__item {
         padding-top: 20px;
         color: $white-color;
+
         &:first-child {
             padding-top: 0;
+            @include phone {
+                padding-top: 20px;
+            }
+        }
+
+        @include table {
+            @include font(15px, 1.6, 400);
+        }
+
+        @include min-table {
+            @include font(15px, 1.6, 400);
+            padding-top: 15px;
+        }
+
+        @include phone {
+            @include font(15px, 1.6, 400);
+            padding-top: 12px;
         }
     }
 
     .gold-cart__btn {
         margin-top: 60px;
-        margin-left: 50%;
-        transform: translate(-50%);
+
+        @include min-table {
+            margin-top: 50px;
+            @include font(15px, 1.6, 400);
+        }
     }
 }

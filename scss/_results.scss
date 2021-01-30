@@ -9,26 +9,84 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include min-table {
+            top: 5%;
+        }
+
+        @include phone {
+            top: 5%;
+        }
     }
 
     .results-wrap {
         display: flex;
         justify-content: space-between;
         padding: 63px 30px 73px 30px;
+
+        @include table {
+            padding: 53px 30px 63px 30px;
+        }
+
+        @include min-table {
+            flex-direction: column;
+            padding: 53px 20px 53px 20px;
+        }
+
+        @include phone {
+            flex-direction: column;
+            padding: 53px 20px 53px 20px;
+        }
     }
 
     .results-content {
         width: 38%;
         text-align: center;
+
+        @include table {
+            width: 39%;
+        }
+
+        @include min-table {
+            width: 100%;
+        }
+
+        @include phone {
+            width: 100%;
+        }
     }
 
     .results-title {
         @include font(28px, 1.8, 500);
         color: $main-heading-color;
+
+        @include min-table {
+            @include font(24px, 1.8, 500);
+        }
+
+        @include phone {
+            padding-top: 20px;
+            @include font(22px, 1.8, 500);
+        }
     }
 
     .results-text {
         padding-top: 25px;
         color: $main-text-color;
+
+        @include table {
+            padding-top: 15px;
+            @include font (16px, 1.6, 400);
+        }
+
+        @include min-table {
+            padding-top: 5px;
+            @include font(16px, 1.8, 500);
+        }
+
+        @include phone {
+            padding-top: 5px;
+            @include font(14px, 1.8, 500);
+        }
     }
 }

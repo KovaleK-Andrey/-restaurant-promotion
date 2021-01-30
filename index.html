@@ -18,19 +18,24 @@
                 <a href="#" class="header__logo-title">siberian trophy</a>
             </div>
             <div class="header__nav">
-                <ul class="header__nav-list">
+                <ul class="header__nav-list" id="menu">
                     <li class="header__nav-item"><a href="#" class="header__nav-link">Правила</a></li>
                     <li class="header__nav-item"><a href="#" class="header__nav-link">Сроки</a></li>
                     <li class="header__nav-item"><a href="#" class="header__nav-link">FAQ</a></li>
                 </ul>
             </div>
+            <button class="header__btn" id="burger">
+                <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M3.5,7 C3.22385763,7 3,6.77614237 3,6.5 C3,6.22385763 3.22385763,6 3.5,6 L20.5,6 C20.7761424,6 21,6.22385763 21,6.5 C21,6.77614237 20.7761424,7 20.5,7 L3.5,7 Z M3.5,12 C3.22385763,12 3,11.7761424 3,11.5 C3,11.2238576 3.22385763,11 3.5,11 L20.5,11 C20.7761424,11 21,11.2238576 21,11.5 C21,11.7761424 20.7761424,12 20.5,12 L3.5,12 Z M3.5,17 C3.22385763,17 3,16.7761424 3,16.5 C3,16.2238576 3.22385763,16 3.5,16 L20.5,16 C20.7761424,16 21,16.2238576 21,16.5 C21,16.7761424 20.7761424,17 20.5,17 L3.5,17 Z"/>
+                </svg>
+            </button>
         </div>
     </header>
 
     <main class="main">
         <section class="intro">
             <div class="intro-wrap  container">
-                <h1 class="intro-title">Стань автором лесной истории</h1>
+                <h1 class="intro-title title">Стань автором лесной истории</h1>
                 <p class="intro-sub-title">Предложи своё блюдо для сезонного меню и получи золотую карту ресторана
                     «Siberian Trophy»!</p>
                 <button class="intro-btn button">Принять участие</button>
@@ -114,7 +119,7 @@
         <section class="gold-cart container">
             <h2 class="gold-cart__title title">Что дает золотая карта ресторана:</h2>
             <div class="gold-cart__advantages">
-                <img src="./img/Gold-card.png" alt="golt-cart">
+                <img class="gold-cart-img" src="./img/Gold-card.png" alt="golt-cart" width="454" height="257">
                 <ul class="gold-cart__list">
                     <li class="gold-cart__item">- скидки на все блюда до 50%</li>
                     <li class="gold-cart__item">- скидки на меню наших партнеров до 30%</li>
@@ -167,6 +172,7 @@
             </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
