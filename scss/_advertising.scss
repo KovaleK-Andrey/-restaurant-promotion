@@ -4,55 +4,32 @@
     .advertising-wrap {
         @include flex-spb;
         align-items: center;
+    }
 
-        @include min-table {
-            flex-direction: column;
-        }
-
-        @include phone {
-            flex-direction: column;
-        }
+    .advertising-content {
+        max-width: 527px;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     }
 
     .advertising-text {
-        width: 30%;
+        margin: 0 auto;
+        width: 86.5%;
         text-align: center;
-
-        @include table {
-            @include font(16px, 1.6, 400);
-            width: 31%;
-        }
-
-        @include min-table {
-            width: 100%;
-        }
-
-        @include phone {
-            width: 100%;
-            @include font(14px, 1.5, 400);
-        }
     }
 
-    .advertising-svg {
-        fill: $fill-color;
+    .advertising-picture {
+        position: relative;
+        left: -25px;
+        max-width: 741px;
+        min-height: 389px;
+        background-color: $advertising-bg-img;
+    }
 
-        @include table {
-            width: 28%;
-            height: 100%;
-        }
-
-        @include min-table {
-            width: 36%;
-            height: 100%;
-        }
-
-        @include phone {
-            width: 53%;
-            height: 100%;
-        }
-
-        &:hover  {
-            fill: $fill-color-hover;
-        }
+    .advertising-img {
+        position: relative;
+        top: 19px;
+        right: -25px;
     }
 }

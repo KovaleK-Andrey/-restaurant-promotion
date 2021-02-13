@@ -1,80 +1,29 @@
 .intro {
-    min-height: 764px;
     top: -99px;
+    display: flex;
     position: relative;
-    background-image: url(../img/intra-bg.webp);
+    background-image: url(../img/intro-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include table {
-        width: 100%;
-        min-height: 664px;
-    }
-
-    @include min-table {
-        width: 100%;
-        min-height: 664px;
-    }
-
-    @include phone {
-        width: 100%;
-        min-height: 664px;
-    }
-
-    .intro-wrap {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 75%;
-
-        @include min-table {
-            width: 100%;
-        }
-
-        @include phone {
-            width: 100%;
-        }
+    .intro-content {
+        width: 47.1%;
+        margin: 186px 0 233px;
     }
 
     .intro-title {
-        width: 100%;
-        text-align: center;
-        @include font (38px, 1.31, 500);
-        color: $title-color;
-
-        @include min-table {
-            @include font (32px, 1.31, 500);
-        }
-
-        @include phone {
-            @include font (26px, 1.1, 500);
-        }
+        @include font-georgia;
+        @include font(45px, 1.33, 400);
     }
 
-    .intro-sub-title {
-        margin-top: 20px;
-        width: 57.3%;
-        text-align: center;
-
-        @include table {
-            width: 77%;
-        }
-
-        @include min-table {
-            width: 80%;
-            margin-top: 30px;
-        }
-        @include phone {
-            width: 90%;
-            @include font (14px, 1.31, 400);
-        }
+    .intro-title-span {
+        color: $intro-color-span;
     }
 
     .intro-btn {
-        margin-top: 47px;
+        width: 51%;
+        margin-top: 60px;
+        padding: 18px 30px;
+        @include font (20px, 1.6, 500);
     }
 }

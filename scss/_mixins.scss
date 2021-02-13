@@ -1,3 +1,28 @@
+@font-face {
+	font-family: 'Georgia';
+	src: url('../fonts/georgia.eot');
+	src: local('☺'), url('../fonts/georgia.woff') format('woff'), url('../fonts/georgia.ttf') format('truetype'), url('../fonts/georgia.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.eot');
+	src: local('☺'), url('../fonts/Poppins-Regular.woff') format('woff'), url('../fonts/Poppins-Regular.ttf') format('truetype'), url('../fonts/Poppins-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto Regular[1].eot');
+	src: local('☺'), url('../fonts/Roboto Regular[1].woff') format('woff'), url('../fonts/Roboto Regular[1].ttf') format('truetype'), url('../fonts/Roboto Regular[1].svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 @mixin font($font-size, $line-height, $font-weight) {
     font-size: $font-size;
     line-height: $line-height;
@@ -13,8 +38,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@mixin font-firo {
-    font-family: 'Fira Mono', monospace;
+@mixin font-georgia {
+    font-family: 'Georgia';
+}
+
+@mixin font-roboto {
+    font-family: 'Roboto';
 }
 
 @mixin table {

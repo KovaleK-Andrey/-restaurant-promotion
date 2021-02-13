@@ -1,5 +1,4 @@
 .footer {
-    background-color: $footer-bg-color;
 
     .footer-wrap  {
         padding: 20px 0;
@@ -17,7 +16,6 @@
     }
 
     .footer-copyright {
-        color: $main-text-color;
         @include phone {
             @include font(14px, 1.2, 400);
         }
@@ -48,7 +46,6 @@
 
     .footer-partners__text {
         text-align: center;
-        color: $main-text-color;
     }
 
     .footer-partners__list {
@@ -63,7 +60,6 @@
         width: 18.25%;
         height: 48px;
         border-radius: 50%;
-        background-color: $partners-bg;
         transition: border-radius .3s linear;
 
         &:hover {

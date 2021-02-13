@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    background-color: $header-bg-color;
+    background-color: transparent;
     position: relative;
     z-index: 3;
 
@@ -10,6 +10,7 @@
     }
 
     .header__logo-title {
+        @include font-georgia;
         @include font (24px, 1.33, 400);
         text-decoration: none;
         color: $white-color;
@@ -80,10 +81,9 @@
         margin: 15px 16px;
 
         &:last-child {
-            @include table {
-                margin-right: 0;
-            }
+            margin-right: 0;
         }
+
         @include min-table {
             margin: 5px 0 0;
         }
@@ -95,9 +95,14 @@
 
     .header__nav-link {
         display: block;
+        outline: none;
         padding: 20px;
         color: $white-color;
         text-decoration: none;
+
+        &:last-child {
+            padding-right: 0;
+        }
 
         @include table {
             padding: 10px;

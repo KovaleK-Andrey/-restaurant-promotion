@@ -9,8 +9,6 @@
         margin: 50px auto 0;
         width: 56.1%;
         padding: 27px 120px 27px 100px;
-        background-color: $results-bg-color;
-        color: $main-heading-color;
 
         @include table {
             width: 80%;
@@ -40,7 +38,6 @@
     }
     .questions-item {
         position: relative;
-        color: $main-text-color;
         margin-top: 15px;
         display: none;
 
@@ -57,7 +54,6 @@
         text-align: center;
         margin: 60px auto 0;
         padding-bottom: 60px;
-        color: $main-text-color;
 
         @include min-table {
             width: 80%;
@@ -75,7 +71,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: $results-bg-color;
 
         @include table {
             padding: 57px 0 50px 0;
@@ -95,7 +90,6 @@
         text-align: center;
         @include font(24px, 1.25, 400);
         padding-top: 40px;
-        color: $main-heading-color;
 
         @include table {
             width: 68%;
