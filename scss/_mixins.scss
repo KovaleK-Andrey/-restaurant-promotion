@@ -1,3 +1,39 @@
+@font-face {
+	font-family: 'Georgia';
+	src: url('../fonts/georgia.eot');
+	src: local('☺'), url('../fonts/georgia.woff') format('woff'), url('../fonts/georgia.ttf') format('truetype'), url('../fonts/georgia.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.eot');
+	src: local('☺'), url('../fonts/Poppins-Regular.woff') format('woff'), url('../fonts/Poppins-Regular.ttf') format('truetype'), url('../fonts/Poppins-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto Regular[1].eot');
+	src: local('☺'), url('../fonts/Roboto Regular[1].woff') format('woff'), url('../fonts/Roboto Regular[1].ttf') format('truetype'), url('../fonts/Roboto Regular[1].svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fira Mono';
+	src: url('../fonts/FiraMono.eot');
+	src: local('../fonts/Fira Mono'), local('../fonts/FiraMono'),
+		url('../fonts/FiraMono.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FiraMono.woff') format('woff'),
+		url('../fonts/FiraMono.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 @mixin font($font-size, $line-height, $font-weight) {
     font-size: $font-size;
     line-height: $line-height;
@@ -7,4 +43,38 @@
 @mixin flex-spb {
     display: flex;
     justify-content: space-between;
+}
+
+@mixin font-main {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin font-georgia {
+    font-family: 'Georgia';
+}
+
+@mixin font-roboto {
+    font-family: 'Roboto';
+}
+
+@mixin font-fira {
+    font-family: 'Fira Mono';
+}
+
+@mixin table {
+    @media (min-width: 801px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin min-table {
+    @media (min-width: 579px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (min-width: 300px) and (max-width: 578px) {
+        @content;
+    }
 }

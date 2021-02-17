@@ -1,0 +1,91 @@
+.gold-cart {
+    background: linear-gradient(90deg, rgba(82, 107, 96, 0.3) 0%, rgba(149, 206, 181, 0.28) 51%, rgba(84, 109, 98, 0.3) 100%);
+    padding-bottom: 96px;
+
+    .gold-vart__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gold-cart__title {
+        padding-top: 62px;
+    }
+
+    .gold-cart__advantages {
+        width: 78.7%;
+        margin: 51px auto 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include table {
+            width: 100%;
+        }
+    }
+
+    .gold-cart-img-wrap {
+        position: relative;
+        display: flex;
+        width: 37.9%;
+        min-height: 235px;
+        height: 100%;
+        background-color: $gold-cart-bg-img;
+
+        @include table {
+            width: 59.6%;
+        }
+    }
+
+    .gold-cart-text {
+        width: 40%;
+        text-align: center;
+        position: absolute;
+        top: 18%;
+        left: 30%;
+        @include font-georgia;
+        @include font(28px, 1.64, 400);
+    }
+
+    .gold-cart-img {
+        width: 91.5%;
+        height: auto;
+        margin: auto;
+    }
+
+    .gold-cart__list {
+        padding-left: 51px;
+    }
+
+    .gold-cart__item {
+        display: flex;
+        align-items: center;
+        @include font(21px, 2.52, 400);
+        color: $white-color;
+
+        @include table {
+            @include font(16px, 2.52, 400);
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    .gold-cart__span {
+        margin-right: 41px;
+        display: block;
+        border-radius: 50%;
+        width: 17px;
+        height: 17px;
+        background-color: $btn-color;
+    }
+
+    .gold-cart__btn {
+        display: block;
+        width: 21%;
+        margin: 0 auto;
+        @include font(20px, 1.6, 500);
+        padding: 15px 20px;
+    }
+}

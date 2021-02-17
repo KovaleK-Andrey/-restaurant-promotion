@@ -1,6 +1,12 @@
 .actions {
-    margin-top: 90px;
-    padding-bottom: 100px;
+    margin: 0 auto;
+    background-image: url(../img/actions-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .actions-title {
+        padding-top: 53px;
+    }
 
     .actions-list {
         margin: 42px auto 0;
@@ -9,37 +15,76 @@
         :first-child {
             margin-top: 0;
         }
+
+        @include table {
+            width: 73.4%;
+        }
     }
 
     .action-item {
         margin-top: 57px;
         @include flex-spb;
+        align-items: center;
+
+        @include table {
+            margin-top: 25px;
+        }
     }
 
     .actions-number {
+        @include font-fira;
         display: block;
         @include font(144px, 0.95, 400);
-        color: $fill-color-hover;
-    } 
+        color: $action-numb-color;
+
+        @include table {
+            @include font(120px, 1, 400);
+        }
+    }
 
     .action-text {
+        background-color: $action-text-bg;
         display: block;
         @include font(18px, 1.66, 400);
         width: 84.7%;
         padding: 40px 69px 40px 30px;
         align-self: center;
-        color: $main-text-color;
-        background-color: $bg-action-text;
+
+        @include table {
+            @include font(16px, 1.37, 400);
+            padding: 25px 69px 25px 25px;
+        }
     }
 
-    .action-link {
-        color: $vk-link-color;
-        text-decoration: none;
-        
-        &:hover,
-        &:focus {
-            color: $fill-color-hover;
-            transition: color .2s linear;
+    .action-condition {
+        width: 63.5%;
+        margin: 99px auto 0;
+        padding-bottom: 85px;
+
+        @include table {
+            width: 79.2%;
+            margin: 50px auto 0;
+            padding-bottom: 46px;
+        }
+    }
+
+    .action-condition__title {
+        @include font(26px, 1.15, 500);
+        text-align: center;
+
+        @include table {
+            @include font(28px, 1.28, 500);
+        }
+    }
+
+    .action-condition-text {
+        padding-top: 30px;
+        @include font(20px, 1.5, 400);
+        text-align: center;
+        color: $main-text-color;
+
+        @include table {
+            @include font(16px, 1.37, 400);
         }
     }
 }

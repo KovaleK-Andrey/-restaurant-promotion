@@ -60,44 +60,90 @@ table {
 }
 
 body {
-    max-width: 1440px;
+    background-color: $body-bg-color;
     width: 100%;
     height: auto;
     margin: 0 auto;
-    background-color: $body-bg;
-    font-family: 'Poppins', sans-serif;;
+    @include font-main;
     @include font (18px, 1.66, 400);
     font-style: normal;
     color: $white-color;
-}
 
-.main {
-    background-image: url(../img/main-bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include table {
+        width: 100%;
+    }
+
+    @include min-table {
+        width: 100%;
+    }
+
+    @include phone {
+        width: 100%;
+    }
 }
 
 .container {
-    max-width: 1230px;
+    max-width: 1332px;
+    padding: 0 15px;
     margin: 0 auto;
+
+    @include table {
+        width: 89.45%;
+        padding: 0;
+    }
+}
+
+.title {
+    @include font-georgia;
+    @include font(38px, 1.3, 400);
+    color: $main-text-color;
+    text-align: center;
+
+    @include table {
+        @include font(32px, 1.12, 400);
+    }
 }
 
 .button {
     background-color: $btn-color;
-    color: $black-color;
-    @include font (18px, 1.7, 400);
+    color: $white-color;
+    text-align: center;
     border: none;
     outline: none;
     transition: background-color .2s linear;
 
     &:hover {
         cursor: pointer;
-        background-color: $title-color;
+        box-shadow: 2px 2px 30px $btn-color;
+    }
+
+    &:focus {
+        background-color: $btn-color-focus;
+    }
+
+    &:active {
+        background-color: $btn-color-active;
+        transition: none;
+    }
+
+    @include min-table {
+        padding: 18px 52px;
+    }
+
+    @include phone {
+        max-width: 145px;
+        @include font(14px, 1.5, 400);
+        padding: 13px 9px;
     }
 }
 
-.title {
-    text-align: center;
-    @include font (38px, 1.31, 500);
-    color: $title-color;
+.vk-link {
+    color: $vk-link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $fill-color-hover;
+        transition: color .2s linear;
+    }
 }

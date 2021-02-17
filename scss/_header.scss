@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    background-color: $header-bg-color;
+    background-color: transparent;
     position: relative;
     z-index: 3;
 
@@ -10,31 +10,87 @@
     }
 
     .header__logo-title {
+        @include font-georgia;
         @include font (24px, 1.33, 400);
         text-decoration: none;
         color: $white-color;
         text-transform: capitalize;
-        
+
         &:hover,
         &:focus {
             color: $fill-color-hover;
             transition: color .2s linear;
+        }
+    }
+
+    .header__nav {
+        @include min-table {
+            visibility: hidden;
+        }
+
+        @include phone {
+            visibility: hidden;
         }
     }
 
     .header__nav-list {
         display: flex;
+
+        @include min-table {
+            flex-direction: column;
+        }
+
+        @include phone {
+            flex-direction: column;
+        }
+    }
+
+    .header__btn {
+        display: none;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        fill: $white-color;
+
+        @include min-table {
+            display: block;
+
+            &:focus {
+                fill: $fill-color-hover;
+            }
+        }
+
+        @include phone{
+            display: block;
+
+            &:focus {
+                fill: $fill-color-hover;
+            }
+        }
     }
 
     .header__nav-item {
         margin: 15px 16px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     .header__nav-link {
         display: block;
+        outline: none;
         padding: 20px;
         color: $white-color;
         text-decoration: none;
+
+        @include table{
+            @include font(16px, 2, 400);
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
 
         &:hover,
         &:focus {
@@ -42,4 +98,19 @@
             transition: color .2s linear;
         }
     }
+}
+
+.show {
+    visibility: visible;
+    position: relative;
+    top: 0;
+    left: 250%;
+    transform: translate(-50%);
+}
+
+.position {
+    position: relative;
+    left: 35px;
+    bottom: 35px;
+    transform: rotate(90deg);
 }

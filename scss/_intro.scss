@@ -1,40 +1,43 @@
 .intro {
-    min-height: 764px;
     top: -99px;
+    display: flex;
     position: relative;
-    background-image: url(../img/intra-bg.webp);
+    background-image: url(../img/intro-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
 
-    .intro-wrap {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50.8%;
+    .intro-content {
+        width: 47.1%;
+        margin: 186px 0 233px;
+
+        @include table {
+            width: 54.5%;
+            margin: 150px 0 202px;
+        }
     }
 
     .intro-title {
-        width: 100%;
-        text-align: center;
-        @include font (38px, 1.31, 500);
-        color: $title-color;
+        @include font-georgia;
+        @include font(45px, 1.33, 400);
+
+        @include table {
+            @include font(36px, 1.22, 400);
+        }
     }
 
-    .intro-sub-title {
-        margin-top: 20px;
-        width: 80.3%;
-        text-align: center;
+    .intro-title-span {
+        color: $intro-color-span;
     }
 
     .intro-btn {
-        max-width: 245px;
-        width: 100%;
-        padding: 14px 52px;
-        margin-top: 47px;
-        text-align: center;
+        width: 51%;
+        margin-top: 60px;
+        padding: 18px 30px;
+        @include font (20px, 1.6, 500);
+
+        @include table {
+            width: 54.8%;
+            padding: 11px 30px;
+        }
     }
 }
