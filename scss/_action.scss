@@ -73,7 +73,7 @@
         text-align: center;
 
         @include table {
-            @include font(28, 1.28, 500);
+            @include font(28px, 1.28, 500);
         }
     }
 
@@ -84,7 +84,7 @@
         color: $main-text-color;
 
         @include table {
-            @include font(16, 1.37, 400);
+            @include font(16px, 1.37, 400);
         }
     }
 }

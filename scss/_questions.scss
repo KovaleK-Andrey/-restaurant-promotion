@@ -1,7 +1,9 @@
 .questions {
+    width: 100%;
     background-image: url(../img/questions-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 
     .questions-title {
         padding-top: 67px;
@@ -53,7 +55,7 @@
         padding-bottom: 60px;
     }
 
-    .questions-wish__wrap {
+    .questions-wish-wrap {
         background-color: $body-bg-color;
     }
 

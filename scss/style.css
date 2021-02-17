@@ -439,7 +439,7 @@ body {
     text-align: center; }
     @media (min-width: 801px) and (max-width: 1024px) {
       .actions .action-condition__title {
-        font-size: 28;
+        font-size: 28px;
         line-height: 1.28;
         font-weight: 500; } }
   .actions .action-condition-text {
@@ -451,7 +451,7 @@ body {
     color: rgba(255, 255, 255, 0.8); }
     @media (min-width: 801px) and (max-width: 1024px) {
       .actions .action-condition-text {
-        font-size: 16;
+        font-size: 16px;
         line-height: 1.37;
         font-weight: 400; } }
 
@@ -552,12 +552,12 @@ body {
     height: auto;
     top: 32px;
     left: -32px; }
-  .results .picture__right {
+  .results .picture-right {
     margin-top: 156px; }
     @media (min-width: 801px) and (max-width: 1024px) {
-      .results .picture__right {
+      .results .picture-right {
         margin-top: 89px; } }
-  .results .img__right {
+  .results .img-right {
     top: -32px;
     left: 32px; }
 
@@ -576,7 +576,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .gold-cart .gold-cart-img__wrap {
+  .gold-cart .gold-cart-img-wrap {
     position: relative;
     display: flex;
     width: 37.9%;
@@ -625,9 +625,11 @@ body {
     padding: 15px 20px; }
 
 .questions {
+  width: 100%;
   background-image: url(../img/questions-bg.webp);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   .questions .questions-title {
     padding-top: 67px; }
   .questions .questions-list {
@@ -668,7 +670,7 @@ body {
     text-align: center;
     margin: 50px auto 0;
     padding-bottom: 60px; }
-  .questions .questions-wish__wrap {
+  .questions .questions-wish-wrap {
     background-color: #2e3b34; }
   .questions .questions-wish {
     background: linear-gradient(90deg, rgba(84, 107, 97, 0.3) 0%, rgba(109, 163, 139, 0.3) 51%, rgba(84, 107, 97, 0.3) 100%);
