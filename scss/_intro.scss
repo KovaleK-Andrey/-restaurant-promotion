@@ -9,11 +9,20 @@
     .intro-content {
         width: 47.1%;
         margin: 186px 0 233px;
+
+        @include table {
+            width: 54.5%;
+            margin: 150px 0 202px;
+        }
     }
 
     .intro-title {
         @include font-georgia;
         @include font(45px, 1.33, 400);
+
+        @include table {
+            @include font(36px, 1.22, 400);
+        }
     }
 
     .intro-title-span {
@@ -25,5 +34,10 @@
         margin-top: 60px;
         padding: 18px 30px;
         @include font (20px, 1.6, 500);
+
+        @include table {
+            width: 54.8%;
+            padding: 11px 30px;
+        }
     }
 }

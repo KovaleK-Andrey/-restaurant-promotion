@@ -1,35 +1,125 @@
 .advertising {
     background-color: transparent;
+    margin-bottom: 160px;
+
+    @include table {
+        margin-bottom: 82px;
+    }
 
     .advertising-wrap {
         @include flex-spb;
         align-items: center;
+        position: relative;
+    }
+    .advertising-elem{
+        position: relative;
+        width: 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: $btn-color;
+        }
     }
 
     .advertising-content {
-        max-width: 527px;
-        width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        position: relative;
+        width: 33.93%;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        background: linear-gradient(90deg, rgba(46, 59, 52, 1) 0%, rgba(50, 67, 58, 0.77) 25%, rgba(69, 95, 81, 0.51) 50%, rgba(50, 67, 58, 0.82) 80%, rgba(46, 59, 52, 1) 95%);
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 1px;
+            height: 30px;
+            background-color: $border-color;
+        }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 1px;
+            height: 30px;
+            background-color: $border-color;
+        }
+
+        @include table {
+            width: 43.3%;
+        }
     }
 
     .advertising-text {
-        margin: 0 auto;
+        margin: 30px auto 48px;
         width: 86.5%;
         text-align: center;
+
+        @include table {
+            width: 94.9%;
+            @include font(16px, 1.37, 400);
+        }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 30px;
+            background-color: $border-color;
+        }
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 30px;
+            background-color: $border-color;
+        }
+
+        &:last-child {
+            margin: 121px auto 54px;
+
+            @include table {
+                margin: 86px auto 42px;
+            }
+        }
     }
 
     .advertising-picture {
         position: relative;
         left: -25px;
-        max-width: 741px;
-        min-height: 389px;
+        width: 47.7%;
         background-color: $advertising-bg-img;
+
+        @include table {
+            width: 49%;
+        }
     }
 
     .advertising-img {
+        width: 100%;
+        height: auto;
         position: relative;
         top: 19px;
         right: -25px;
+
+        @include table {
+            top: 25px;
+        }
     }
 }

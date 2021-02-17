@@ -1,5 +1,12 @@
 .actions {
-    margin-top: 90px;
+    margin: 0 auto;
+    background-image: url(../img/actions-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .actions-title {
+        padding-top: 53px;
+    }
 
     .actions-list {
         margin: 42px auto 0;
@@ -10,82 +17,54 @@
         }
 
         @include table {
-            width: 90%;
-        }
-
-        @include min-table {
-            width: 100%;
-        }
-
-        @include phone {
-            width: 100%;
+            width: 73.4%;
         }
     }
 
     .action-item {
         margin-top: 57px;
         @include flex-spb;
+        align-items: center;
 
-        @include min-table {
-            margin-top: 41px;
-        }
-
-        @include phone {
-            margin-top: 31px;
+        @include table {
+            margin-top: 25px;
         }
     }
 
     .actions-number {
+        @include font-fira;
         display: block;
         @include font(144px, 0.95, 400);
-        color: $fill-color-hover;
+        color: $action-numb-color;
 
-        @include min-table {
-            @include font(100px, 0.95, 400);
-            align-self: center;
+        @include table {
+            @include font(120px, 1, 400);
         }
-
-        @include phone {
-            display: none;
-        }
-    } 
+    }
 
     .action-text {
+        background-color: $action-text-bg;
         display: block;
         @include font(18px, 1.66, 400);
         width: 84.7%;
         padding: 40px 69px 40px 30px;
         align-self: center;
 
-        @include min-table {
-            @include font(14px, 1.66, 400);
-            padding: 30px 59px 30px 20px;
-        }
-
-        @include phone {
-            width: 100%;
-            @include font(12px, 1.66, 400);
-            padding: 30px 14px 30px 14px;
+        @include table {
+            @include font(16px, 1.37, 400);
+            padding: 25px 69px 25px 25px;
         }
     }
 
     .action-condition {
-        width: 60.5%;
+        width: 63.5%;
         margin: 99px auto 0;
-        padding-bottom: 99px;
+        padding-bottom: 85px;
 
         @include table {
-            width: 90%;
-        }
-
-        @include min-table {
-            margin: 69px auto 0;
-            width: 100%;
-        }
-
-        @include phone {
-            margin: 69px auto 0;
-            width: 100%;
+            width: 79.2%;
+            margin: 50px auto 0;
+            padding-bottom: 46px;
         }
     }
 
@@ -93,8 +72,8 @@
         @include font(26px, 1.15, 500);
         text-align: center;
 
-        @include phone {
-            @include font(22px, 1.15, 500);
+        @include table {
+            @include font(28, 1.28, 500);
         }
     }
 
@@ -102,15 +81,10 @@
         padding-top: 30px;
         @include font(20px, 1.5, 400);
         text-align: center;
+        color: $main-text-color;
 
-        @include min-table {
-            padding-top: 20px;
-            @include font(16px, 1.5, 400);
-        }
-
-        @include phone {
-            padding-top: 20px;
-            @include font(14px, 1.5, 400);
+        @include table {
+            @include font(16, 1.37, 400);
         }
     }
 }

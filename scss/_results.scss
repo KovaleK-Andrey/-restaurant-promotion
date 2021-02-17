@@ -1,89 +1,136 @@
 .results {
     width: 100%;
-    position: relative;
-    
-    &::before {
-        content: url(../img/triangles.svg);
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        @include min-table {
-            top: 5%;
-        }
-
-        @include phone {
-            top: 5%;
-        }
-    }
 
     .results-wrap {
-        display: flex;
-        justify-content: space-between;
-        padding: 63px 30px 73px 30px;
+        @include flex-spb;
+        position: relative;
+        margin-bottom: 125px;
 
-        @include table {
-            padding: 53px 30px 63px 30px;
-        }
-
-        @include min-table {
-            flex-direction: column;
-            padding: 53px 20px 53px 20px;
-        }
-
-        @include phone {
-            flex-direction: column;
-            padding: 53px 20px 53px 20px;
+        &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: $btn-color;
         }
     }
 
     .results-content {
-        width: 38%;
-        text-align: center;
+        width: 45.3%;
 
         @include table {
-            width: 39%;
-        }
-
-        @include min-table {
-            width: 100%;
-        }
-
-        @include phone {
-            width: 100%;
+            width: 50%;
         }
     }
 
-    .results-title {
-        @include font(28px, 1.8, 500);
+    .results-content-text {
+        width: 92.2%;
+        margin-top: 125px;
+        position: relative;
+        text-align: center;
+        @include font(20px, 1.5, 400);
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        background: linear-gradient(90deg, #2E3B34 1.81%, rgba(69, 95, 81, 0.515625) 50.33%, rgba(46, 59, 52, 0.99) 101.99%);
 
-        @include min-table {
-            @include font(24px, 1.8, 500);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 30px;
+            background-color: $border-color;
         }
 
-        @include phone {
-            padding-top: 20px;
-            @include font(22px, 1.8, 500);
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 30px;
+            background-color: $border-color;
+        }
+
+        @include table {
+            width: 100%;
+            margin-top: 195px;
         }
     }
 
     .results-text {
-        padding-top: 25px;
+        color: $main-text-color;
+        padding: 34px 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 1px;
+            height: 30px;
+            background-color: $border-color;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 1px;
+            height: 30px;
+            background-color: $border-color;
+        }
 
         @include table {
-            padding-top: 15px;
-            @include font (16px, 1.6, 400);
-        }
-
-        @include min-table {
-            padding-top: 5px;
-            @include font(16px, 1.8, 500);
-        }
-
-        @include phone {
-            padding-top: 5px;
-            @include font(14px, 1.8, 500);
+            @include font(16px, 1.37, 400);
+            padding: 34px 20px;
         }
     }
+
+    .results-text-span {
+        color: $result-span-color;
+    }
+
+    .results-content-picture {
+        margin-top: 131px;
+        position: relative;
+        top: 0;
+        left: 32px;
+        width: 79.9%;
+        min-height: auto;
+        background-color: $advertising-bg-img;
+
+        @include table {
+            margin-top: 170px;
+        }
+    }
+
+    .results-content-img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 32px;
+        left: -32px;
+    }
+
+    .picture__right {
+        margin-top: 156px;
+
+        @include table {
+            margin-top: 89px;
+        }
+    }
+
+    .img__right {
+        top: -32px;
+        left: 32px;
+    }
 }
+
+

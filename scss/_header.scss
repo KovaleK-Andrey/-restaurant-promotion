@@ -16,14 +16,6 @@
         color: $white-color;
         text-transform: capitalize;
 
-        @include min-table {
-            @include font (20px, 1.33, 400);
-        }
-
-        @include phone {
-            @include font (18px, 1.33, 400);
-        }
-        
         &:hover,
         &:focus {
             color: $fill-color-hover;
@@ -83,14 +75,6 @@
         &:last-child {
             margin-right: 0;
         }
-
-        @include min-table {
-            margin: 5px 0 0;
-        }
-
-        @include phone {
-            margin: 5px 0 0;
-        }
     }
 
     .header__nav-link {
@@ -100,27 +84,12 @@
         color: $white-color;
         text-decoration: none;
 
+        @include table{
+            @include font(16px, 2, 400);
+        }
+
         &:last-child {
             padding-right: 0;
-        }
-
-        @include table {
-            padding: 10px;
-        }
-
-        @include min-table {
-            padding: 0;
-        }
-
-        @include phone {
-            padding: 0;
-            @include font(14px, 1.5, 400);
-        }
-
-        &:last-child {
-            @include table {
-                padding-right: 0;
-            }
         }
 
         &:hover,
@@ -137,11 +106,6 @@
     top: 0;
     left: 250%;
     transform: translate(-50%);
-
-    @include phone {
-        left: 100%;
-        @include font(14px, 1.5, 400);
-    }
 }
 
 .position {
@@ -149,8 +113,4 @@
     left: 35px;
     bottom: 35px;
     transform: rotate(90deg);
-    @include phone {
-        left: 5px;
-        bottom: 25px;
-    }
 }
